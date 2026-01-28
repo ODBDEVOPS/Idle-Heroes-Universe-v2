@@ -1,0 +1,62 @@
+@if(hero(); as h) {
+<div class="h-full w-full relative overflow-hidden flex flex-col items-center justify-center p-4 bg-gray-900 animate-fadeIn">
+  <!-- BG Effects -->
+  <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/40 to-gray-900 opacity-80"></div>
+  <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.3)_0%,transparent_70%)] animate-pulse-glow" style="animation-duration: 5s;"></div>
+
+  <div class="relative z-10 text-center max-w-2xl w-full animate-pop-in-soft">
+    <header class="mb-6">
+      <h1 class="text-4xl font-orbitron text-green-300 drop-shadow-lg">NEW HERO ACQUIRED</h1>
+    </header>
+
+    <main class="bg-black/30 p-6 rounded-2xl border-2" [class]="getRarityBorderClass(h.rarity)">
+      <!-- Hero Header -->
+      <div class="flex flex-col sm:flex-row items-center gap-6 mb-6">
+        <div class="w-40 h-40 rounded-lg flex-shrink-0 border-4 relative overflow-hidden bg-gray-800/50" [class]="getRarityBorderClass(h.rarity)">
+          <!-- Empty Slot Placeholder -->
+          <div class="absolute inset-0 flex items-center justify-center animate-placeholder-fade-out z-10">
+            <span class="font-orbitron text-9xl text-purple-400/20">+</span>
+          </div>
+          <!-- Hero Content -->
+          <div class="absolute inset-0 flex items-center justify-center animate-hero-content-fade-in z-20">
+            <svg viewBox="0 0 24 24" class="absolute inset-0 w-full h-full text-black/20 z-0 transform scale-125 opacity-50">
+              <path [attr.d]="roleIcons[h.role] || ''" fill="currentColor"></path>
+            </svg>
+            <span class="font-orbitron text-7xl text-gray-200 drop-shadow-lg relative z-10">{{ getHeroInitials(h.name) }}</span>
+          </div>
+        </div>
+        <div class="flex-grow text-center sm:text-left animate-hero-content-fade-in" style="animation-delay: 0.5s;">
+          <h2 class="font-orbitron text-4xl font-bold text-white">{{ h.name }}</h2>
+          <p class="text-2xl font-semibold" [class]="getRarityTextColor(h.rarity)">{{ h.rarity }} {{ h.role }}</p>
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div class="space-y-4 text-left animate-hero-content-fade-in" style="animation-delay: 0.6s;">
+        <div class="bg-gray-900/50 rounded-lg p-3">
+          <h3 class="font-orbitron text-lg text-purple-300 mb-1 border-b border-gray-700 pb-1">Active Skill</h3>
+          <p class="text-sm text-gray-300">{{ h.skillDescription }}</p>
+        </div>
+        <div class="bg-gray-900/50 rounded-lg p-3">
+          <h3 class="font-orbitron text-lg text-purple-300 mb-1 border-b border-gray-700 pb-1">Lore</h3>
+          <p class="text-sm text-gray-400 italic">{{ h.lore }}</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-6 animate-hero-content-fade-in" style="animation-delay: 0.7s;">
+        <button (click)="unlockHero()" [disabled]="gameService().gameState().gold < unlockCost()"
+                class="w-full max-w-sm mx-auto py-4 bg-green-600 text-white font-bold text-xl rounded-lg hover:bg-green-700 transition-all duration-200 disabled:bg-gray-600 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 disabled:hover:scale-100 shadow-lg hover:shadow-xl hover:shadow-green-500/40">
+            <div>Activate Hero</div>
+            <div class="text-sm text-yellow-200">💰 {{ formatNumber(unlockCost()) }}</div>
+        </button>
+    </footer>
+
+  </div>
+</div>
+} @else {
+    <div class="text-center">
+        <p class="text-xl text-red-500">Error: Hero data not found.</p>
+        <button (click)="viewChange.emit('teamHub')" class="mt-4 px-4 py-2 bg-purple-600 rounded-md">Return to Hub</button>
+    </div>
+}
