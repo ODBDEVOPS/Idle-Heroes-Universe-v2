@@ -1,0 +1,18 @@
+<div class="h-full w-full relative overflow-hidden flex flex-col items-center justify-center p-4 bg-gray-900 animate-fadeIn">
+  <!-- Background Elements -->
+  <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/40 to-yellow-900/30 z-0"></div>
+  <div class="absolute inset-x-0 top-0 h-64 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-800/30 to-transparent"></div>
+  <div class="absolute inset-x-0 bottom-0 h-64 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-yellow-800/20 to-transparent"></div>
+
+  <main class="relative z-10 w-full max-w-4xl text-center">
+    <div class="bg-black/40 p-8 rounded-2xl border-2 border-yellow-500/50 shadow-2xl shadow-purple-500/20">
+      <h1 class="text-5xl font-orbitron text-white drop-shadow-lg">Guild Hall</h1>
+      <p class="text-gray-300 mt-4 max-w-md mx-auto">
+        Join forces with other heroes, unlock powerful guild-wide bonuses, and rise through the ranks together.
+      </p>
+      <button (click)="navigateTo('guild')" class="mt-8 px-8 py-4 bg-yellow-600 text-black font-bold text-xl rounded-lg hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl hover:shadow-yellow-500/40">
+        Enter Guild Hall
+      </button>
+    </div>
+  </main>
+</div>
