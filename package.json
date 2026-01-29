@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "ng serve",
-    "build": "ng build",
-    "preview": "ng serve --configuration=production"
+    "build": "ng build --configuration production",
+    "preview": "ng serve --configuration production"
   },
   "dependencies": {
     "@angular/animations": "^17.3.8",
