@@ -24,6 +24,9 @@
   "devDependencies": {
     "@types/node": "^22.14.0",
     "typescript": "^5.9.0",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "@angular-devkit/build-angular": "^17.3.8", 
+    "@angular/cli": "^17.3.8", 
+    "@angular/compiler-cli": "^17.3.8"
   }
 }
