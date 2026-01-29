@@ -19,7 +19,6 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "DOM"]
   },
-  "files": [],
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }
