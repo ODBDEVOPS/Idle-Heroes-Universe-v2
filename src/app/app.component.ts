@@ -17,7 +17,7 @@ import { CelestialShrineComponent } from './components/celestial-shrine/celestia
 import { SynergiesComponent } from './components/synergies/synergies.component';
 import { AlchemyLabComponent } from './components/alchemy-lab/alchemy-lab.component';
 import { HeroUnlockComponent } from './components/hero-unlock/hero-unlock.component';
-import { TooltipDirective } from './directives/tooltip.directive';
+import { TooltipDirective } from './app/directives/tooltip.directive';
 import { BaseComponent } from './components/base/base.component';
 import { TeamHubComponent } from './components/team-hub/team-hub.component';
 import { FusionComponent } from './components/fusion/fusion.component';
