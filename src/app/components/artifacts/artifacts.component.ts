@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, input, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GameService, ALL_ARTIFACTS } from '../../services/game.service';
-import { Artifact } from '../../models/artifact.model';
+import { GameService, ALL_ARTIFACTS } from '../../../services/game.service';
+import { Artifact } from '../../../models/artifact.model';
 
 @Component({
   selector: 'app-artifacts',
