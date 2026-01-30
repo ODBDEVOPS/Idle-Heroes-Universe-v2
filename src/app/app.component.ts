@@ -1,67 +1,67 @@
 import { Component, ChangeDetectionStrategy, signal, computed, effect, ElementRef, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CombatComponent } from './components/combat/combat.component';
-import { TeamComponent } from './components/team/team.component';
-import { GameService } from './services/game.service';
-import { QuestsComponent } from './components/quests/quests.component';
-import { ForgeComponent } from './components/forge/forge.component';
-import { SummonComponent } from './components/summon/summon.component';
-import { TowerComponent } from './components/tower/tower.component';
-import { ArtifactsComponent } from './components/artifacts/artifacts.component';
-import { CodexComponent } from './components/codex/codex.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { InventoryComponent } from './components/inventory/inventory.component';
-import { ExpeditionsComponent } from './components/expeditions/expeditions.component';
-import { CelestialShrineComponent } from './components/celestial-shrine/celestial-shrine.component';
-import { SynergiesComponent } from './components/synergies/synergies.component';
-import { AlchemyLabComponent } from './components/alchemy-lab/alchemy-lab.component';
-import { HeroUnlockComponent } from './components/hero-unlock/hero-unlock.component';
+import { CombatComponent } from './app/components/combat/combat.component';
+import { TeamComponent } from './app/components/team/team.component';
+import { GameService } from './app/services/game.service';
+import { QuestsComponent } from './app/components/quests/quests.component';
+import { ForgeComponent } from './app/components/forge/forge.component';
+import { SummonComponent } from './app/components/summon/summon.component';
+import { TowerComponent } from './app/components/tower/tower.component';
+import { ArtifactsComponent } from './app/components/artifacts/artifacts.component';
+import { CodexComponent } from './app/components/codex/codex.component';
+import { SettingsComponent } from './app/components/settings/settings.component';
+import { InventoryComponent } from './app/components/inventory/inventory.component';
+import { ExpeditionsComponent } from './app/components/expeditions/expeditions.component';
+import { CelestialShrineComponent } from './app/components/celestial-shrine/celestial-shrine.component';
+import { SynergiesComponent } from './app/components/synergies/synergies.component';
+import { AlchemyLabComponent } from './app/components/alchemy-lab/alchemy-lab.component';
+import { HeroUnlockComponent } from './app/components/hero-unlock/hero-unlock.component';
 import { TooltipDirective } from './app/directives/tooltip.directive';
-import { BaseComponent } from './components/base/base.component';
-import { TeamHubComponent } from './components/team-hub/team-hub.component';
-import { FusionComponent } from './components/fusion/fusion.component';
-import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
-import { ReliquesComponent } from './components/reliques/reliques.component';
-import { DungeonsComponent } from './components/dungeons/dungeons.component';
-import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
-import { PetsComponent } from './components/pets/pets.component';
-import { HeroCommandComponent } from './components/hero-command/hero-command.component';
-import { EnchantComponent } from './components/enchant/enchant.component';
-import { ChronicleComponent } from './components/chronicle/chronicle.component';
-import { SkillTrainingComponent } from './components/skill-training/skill-training.component';
-import { SkillTreeComponent } from './components/skill-tree/skill-tree.component';
-import { HeroFarmComponent } from './components/hero-farm/hero-farm.component';
-import { IngenierieComponent } from './components/ingenierie/ingenierie.component';
-import { AlchimieComponent } from './components/alchimie/alchimie.component';
-import { CoutureComponent } from './components/couture/couture.component';
-import { TravailDuCuirComponent } from './components/travail-du-cuir/travail-du-cuir.component';
-import { CuisineComponent } from './components/cuisine/cuisine.component';
-import { PecheComponent } from './components/peche/peche.component';
-import { DepecageComponent } from './components/depecage/depecage.component';
-import { HerboristerieComponent } from './components/herboristerie/herboristerie.component';
-import { MinageComponent } from './components/minage/minage.component';
-import { HeroSpecializationComponent } from './components/hero-specialization/hero-specialization.component';
-import { ProfessionsComponent } from './components/professions/professions.component';
-import { SoulAlchemyComponent } from './components/soul-alchemy/soul-alchemy.component';
-import { NecroArtisanatComponent } from './components/necro-artisanat/necro-artisanat.component';
-import { MissionsComponent } from './components/missions/missions.component';
-import { BijoutierComponent } from './components/bijoutier/bijoutier.component';
-import { BrewmasterComponent } from './components/brewmaster/brewmaster.component';
-import { ArtisanArmesComponent } from './components/artisan-armes/artisan-armes.component';
-import { ArtisanArmuresComponent } from './components/artisan-armures/artisan-armures.component';
-import { CalligrapheComponent } from './components/calligraphe/calligraphe.component';
-import { SculpteurComponent } from './components/sculpteur/sculpteur.component';
-import { ArchitecteComponent } from './components/architecte/architecte.component';
-import { CartographeComponent } from './components/cartographe/cartographe.component';
-import { BucheronComponent } from './components/bucheron/bucheron.component';
-import { DimensionalRiftComponent } from './components/dimensional-rift/dimensional-rift.component';
-import { GuildHubComponent } from './components/guild-hub/guild-hub.component';
-import { GuildComponent } from './components/guild/guild.component';
-import { AuctionHouseComponent } from './components/auction-house/auction-house.component';
-import { UpgradesComponent } from './components/upgrades/upgrades.component';
-import { HeadquartersComponent } from './components/headquarters/headquarters.component';
-import { InventoryHubComponent } from './components/inventory-hub/inventory-hub.component';
+import { BaseComponent } from './app/components/base/base.component';
+import { TeamHubComponent } from './app/components/team-hub/team-hub.component';
+import { FusionComponent } from './app/components/fusion/fusion.component';
+import { HeroDetailComponent } from './app/components/hero-detail/hero-detail.component';
+import { ReliquesComponent } from './app/components/reliques/reliques.component';
+import { DungeonsComponent } from './app/components/dungeons/dungeons.component';
+import { LeaderboardComponent } from './app/components/leaderboard/leaderboard.component';
+import { PetsComponent } from './app/components/pets/pets.component';
+import { HeroCommandComponent } from './app/components/hero-command/hero-command.component';
+import { EnchantComponent } from './app/components/enchant/enchant.component';
+import { ChronicleComponent } from './app/components/chronicle/chronicle.component';
+import { SkillTrainingComponent } from './app/components/skill-training/skill-training.component';
+import { SkillTreeComponent } from './app/components/skill-tree/skill-tree.component';
+import { HeroFarmComponent } from './app/components/hero-farm/hero-farm.component';
+import { IngenierieComponent } from './app/components/ingenierie/ingenierie.component';
+import { AlchimieComponent } from './app/components/alchimie/alchimie.component';
+import { CoutureComponent } from './app/components/couture/couture.component';
+import { TravailDuCuirComponent } from './app/components/travail-du-cuir/travail-du-cuir.component';
+import { CuisineComponent } from './app/components/cuisine/cuisine.component';
+import { PecheComponent } from './app/components/peche/peche.component';
+import { DepecageComponent } from './app/components/depecage/depecage.component';
+import { HerboristerieComponent } from './app/components/herboristerie/herboristerie.component';
+import { MinageComponent } from './app/components/minage/minage.component';
+import { HeroSpecializationComponent } from './app/components/hero-specialization/hero-specialization.component';
+import { ProfessionsComponent } from './app/components/professions/professions.component';
+import { SoulAlchemyComponent } from './app/components/soul-alchemy/soul-alchemy.component';
+import { NecroArtisanatComponent } from './app/components/necro-artisanat/necro-artisanat.component';
+import { MissionsComponent } from './app/components/missions/missions.component';
+import { BijoutierComponent } from './app/components/bijoutier/bijoutier.component';
+import { BrewmasterComponent } from './app/components/brewmaster/brewmaster.component';
+import { ArtisanArmesComponent } from './app/components/artisan-armes/artisan-armes.component';
+import { ArtisanArmuresComponent } from './app/components/artisan-armures/artisan-armures.component';
+import { CalligrapheComponent } from './app/components/calligraphe/calligraphe.component';
+import { SculpteurComponent } from './app/components/sculpteur/sculpteur.component';
+import { ArchitecteComponent } from './app/components/architecte/architecte.component';
+import { CartographeComponent } from './app/components/cartographe/cartographe.component';
+import { BucheronComponent } from './app/components/bucheron/bucheron.component';
+import { DimensionalRiftComponent } from './app/components/dimensional-rift/dimensional-rift.component';
+import { GuildHubComponent } from './app/components/guild-hub/guild-hub.component';
+import { GuildComponent } from './app/components/guild/guild.component';
+import { AuctionHouseComponent } from './app/components/auction-house/auction-house.component';
+import { UpgradesComponent } from './app/components/upgrades/upgrades.component';
+import { HeadquartersComponent } from './app/components/headquarters/headquarters.component';
+import { InventoryHubComponent } from './app/components/inventory-hub/inventory-hub.component';
 
 export type View = 'quests' | 'settings' | 
              'combat' | 'forge' | 'tower' | 'expeditions' | 'celestialShrine' | 'alchemyLab' | 'enchant' | 'chronicle' | 'skillTraining' | 'heroFarm' | 'soulAlchemy' | 'missions' | 'dimensionalRift' |
@@ -75,7 +75,7 @@ export type View = 'quests' | 'settings' |
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app/app.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, CombatComponent, TeamComponent, QuestsComponent, ForgeComponent, SummonComponent, TowerComponent, ArtifactsComponent, CodexComponent, SettingsComponent, InventoryComponent, ExpeditionsComponent, CelestialShrineComponent, SynergiesComponent, AlchemyLabComponent, HeroUnlockComponent, TooltipDirective, BaseComponent, TeamHubComponent, FusionComponent, HeroDetailComponent, ReliquesComponent, DungeonsComponent, LeaderboardComponent, PetsComponent, HeroCommandComponent, EnchantComponent, ChronicleComponent, SkillTrainingComponent, SkillTreeComponent, HeroFarmComponent, IngenierieComponent, AlchimieComponent, CoutureComponent, TravailDuCuirComponent, CuisineComponent, PecheComponent, DepecageComponent, HerboristerieComponent, MinageComponent, HeroSpecializationComponent, ProfessionsComponent, SoulAlchemyComponent, NecroArtisanatComponent, MissionsComponent, BijoutierComponent, BrewmasterComponent, ArtisanArmesComponent, ArtisanArmuresComponent, CalligrapheComponent, SculpteurComponent, ArchitecteComponent, CartographeComponent, BucheronComponent, DimensionalRiftComponent, GuildHubComponent, GuildComponent, AuctionHouseComponent, UpgradesComponent, HeadquartersComponent, InventoryHubComponent],
   host: {
