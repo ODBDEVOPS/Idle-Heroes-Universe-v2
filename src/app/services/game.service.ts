@@ -1,28 +1,28 @@
 import { signal, computed, WritableSignal } from '@angular/core';
-import { GameState, ActiveDungeonRun, TeamPreset, ActiveDungeonBounty, HeroFarmState, GuildMember } from '../app/models/game-state.model';
+import { GameState, ActiveDungeonRun, TeamPreset, ActiveDungeonBounty, HeroFarmState, GuildMember } from '../models/game-state.model';
 // FIX: Import Rarity from equipment.model.ts to break circular dependency.
-import { Hero, Role, HeroStats } from '../app/models/hero.model';
-import { Enemy, EnemyType, CodexMonster, Anomaly, RiftEnemy } from '../app/models/enemy.model';
-import { Quest } from '../app/models/quest.model';
-import { EquipmentItem, EquipmentSlot, EquipmentBonusType, Rarity, ALL_EQUIPMENT_SETS } from '../app/models/equipment.model';
-import { Artifact } from '../app/models/artifact.model';
-import { Expedition, OngoingExpedition } from '../app/models/expedition.model';
-import { Blessing, BlessingType, ActiveBlessing, BlessingCooldown } from '../app/models/celestial-shrine.model';
-import { Dungeon, DungeonDifficulty, DungeonBounty, DungeonShopItem } from '../app/models/dungeon.model';
-import { LeaderboardEntry } from '../app/models/leaderboard.model';
-import { Pet, PlayerPet } from '../app/models/pet.model';
+import { Hero, Role, HeroStats } from '../models/hero.model';
+import { Enemy, EnemyType, CodexMonster, Anomaly, RiftEnemy } from '../models/enemy.model';
+import { Quest } from '../models/quest.model';
+import { EquipmentItem, EquipmentSlot, EquipmentBonusType, Rarity, ALL_EQUIPMENT_SETS } from '../models/equipment.model';
+import { Artifact } from '../models/artifact.model';
+import { Expedition, OngoingExpedition } from '../models/expedition.model';
+import { Blessing, BlessingType, ActiveBlessing, BlessingCooldown } from '../models/celestial-shrine.model';
+import { Dungeon, DungeonDifficulty, DungeonBounty, DungeonShopItem } from '../models/dungeon.model';
+import { LeaderboardEntry } from '../models/leaderboard.model';
+import { Pet, PlayerPet } from '../models/pet.model';
 import { ChronicleService, StrategicAnalysisPayload } from './chronicle.service';
-import { HeroMemory, ChronicleQuest } from '../app/models/chronicle.model';
-import { SkillTreeNodeEffect } from '../app/models/skill-tree.model';
-import { SKILL_TREE_DATA } from '../app/data/skill-tree-data';
-import { ASCII_ART } from '../app/data/ascii-art';
-import { Material, ALL_MATERIALS } from '../app/models/material.model';
-import { Specialization, SpecializationPath } from '../app/models/specialization.model';
-import { ALL_SPECIALIZATIONS, ALL_SPECIALIZATION_PATHS } from '../app/data/specializations';
-import { TowerChallenge, TowerChallengeOutcome } from '../app/models/tower.model';
-import { MissionReward } from '../app/models/mission.model';
-import { ALL_MISSIONS } from '../app/data/missions-data';
-import { ALL_NECRO_CONSTRUCTS, ALL_NECRO_RECIPES, NecroConstruct, NecroConstructRecipe } from '../app/models/necro-construct.model';
+import { HeroMemory, ChronicleQuest } from '../models/chronicle.model';
+import { SkillTreeNodeEffect } from '../models/skill-tree.model';
+import { SKILL_TREE_DATA } from '../data/skill-tree-data';
+import { ASCII_ART } from '../data/ascii-art';
+import { Material, ALL_MATERIALS } from '../models/material.model';
+import { Specialization, SpecializationPath } from '../models/specialization.model';
+import { ALL_SPECIALIZATIONS, ALL_SPECIALIZATION_PATHS } from '../data/specializations';
+import { TowerChallenge, TowerChallengeOutcome } from '../models/tower.model';
+import { MissionReward } from '../models/mission.model';
+import { ALL_MISSIONS } from '../data/missions-data';
+import { ALL_NECRO_CONSTRUCTS, ALL_NECRO_RECIPES, NecroConstruct, NecroConstructRecipe } from '../models/necro-construct.model';
 
 // FIX: Added missing baseHp, maxHp, currentHp to all hero definitions.
 export const ALL_HEROES: Omit<Hero, 'currentDps' | 'nextLevelCost' | 'equipment' | 'skillCharge' | 'skillReady' | 'currentXp' | 'xpToNextLevel' | 'offlineXp'>[] = [
