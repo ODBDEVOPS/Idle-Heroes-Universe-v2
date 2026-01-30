@@ -1,10 +1,10 @@
 import { Component, ChangeDetectionStrategy, output, input, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { View } from '../../app.component';
-import { GameService } from '../../services/game.service';
-import { ALL_MATERIALS } from '../../models/material.model';
+import { View } from '../../../app.component';
+import { GameService } from '../../../services/game.service';
+import { ALL_MATERIALS } from '../../../models/material.model';
 // FIX: Changed import for Rarity from hero.model to equipment.model
-import { Rarity } from '../../models/equipment.model';
+import { Rarity } from '../../../models/equipment.model';
 
 @Component({
   selector: 'app-architecte',
