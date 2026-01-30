@@ -1,9 +1,9 @@
 import { Component, ChangeDetectionStrategy, input, output, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GameService } from '../../app/services/game.service';
-import { View } from '../../app/app.component';
-import { EquipmentItem, EquipmentSlot, Rarity } from '../../app/models/equipment.model';
-import { TooltipDirective } from '../../app/directives/tooltip.directive';
+import { GameService } from '../../../services/game.service';
+import { View } from '../../../app.component';
+import { EquipmentItem, EquipmentSlot, Rarity } from '../../../models/equipment.model';
+import { TooltipDirective } from '../../../directives/tooltip.directive';
 
 const RARITY_ORDER: Rarity[] = ['Common', 'Rare', 'Epic', 'Legendary', 'Mythic'];
 
