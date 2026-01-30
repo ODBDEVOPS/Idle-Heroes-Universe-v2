@@ -1,9 +1,9 @@
 import { Component, ChangeDetectionStrategy, output, input, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { View } from '../../app.component';
-import { GameService } from '../../services/game.service';
-import { ALL_MATERIALS } from '../../models/material.model';
-import { Rarity } from '../../models/equipment.model';
+import { View } from '../../../app.component';
+import { GameService } from '../../../services/game.service';
+import { ALL_MATERIALS } from '../../../models/material.model';
+import { Rarity } from '../../../models/equipment.model';
 
 @Component({
   selector: 'app-alchimie',
