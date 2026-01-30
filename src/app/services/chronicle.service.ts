@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { GoogleGenAI, Type } from '@google/genai';
-import { Hero } from '../models/hero.model';
-import { ChronicleQuest, ChronicleQuestType } from '../models/chronicle.model';
+import { Hero } from '../app/models/hero.model';
+import { ChronicleQuest, ChronicleQuestType } from '../app/models/chronicle.model';
 
 // This is a simplified interface for the quest data returned by the API
 interface ChronicleQuestData {
