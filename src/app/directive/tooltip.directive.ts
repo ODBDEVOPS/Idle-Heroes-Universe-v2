@@ -1,5 +1,5 @@
 import { Directive, ElementRef, OnDestroy, ComponentRef, ViewContainerRef, input, Renderer2, HostListener } from '@angular/core';
-import { TooltipComponent } from '../components/tooltip/tooltip.component';
+import { TooltipComponent } from '../app/components/tooltip/tooltip.component';
 
 @Directive({
   selector: '[appTooltip]',
